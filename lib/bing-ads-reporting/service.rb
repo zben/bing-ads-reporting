@@ -83,8 +83,8 @@ module BingAdsReporting
       def download(url)
         puts %Q{Downloading Bing report from: #{url}}
         curl = Curl::Easy.new(url) do |c|
-          c.use_ssl = 3
-          c.ssl_version = 3
+          #c.use_ssl = 3
+          #c.ssl_version = 3
         end
         curl.perform
         curl.body_str
